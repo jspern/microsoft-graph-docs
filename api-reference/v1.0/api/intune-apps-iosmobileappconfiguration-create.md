@@ -81,7 +81,7 @@ Content-length: 534
   "encodedSettingXml": "ZW5jb2RlZFNldHRpbmdYbWw=",
   "settings": [
     {
-      "@odata.type": "microsoft.graph.appConfigurationSettingItem",
+      "@odata.type": "#microsoft.graph.appConfigurationSettingItem",
       "appConfigKey": "App Config Key value",
       "appConfigKeyType": "integerType",
       "appConfigKeyValue": "App Config Key Value value"
