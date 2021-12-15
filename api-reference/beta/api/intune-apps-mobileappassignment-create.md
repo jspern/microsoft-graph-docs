@@ -32,7 +32,7 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-POST /deviceAppManagement/mobileApps/{mobileAppId}/assignments
+POST /deviceAppManagement/mobileApps/{mobileAppId}/assign
 ```
 
 ## Request headers
@@ -65,27 +65,27 @@ If successful, this method returns a `201 Created` response code and a [mobileAp
 ### Request
 Here is an example of the request.
 ``` http
-POST https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/{mobileAppId}/assignments
+POST https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/{mobileAppId}/assign
 Content-type: application/json
 Content-length: 617
 
-{
-  "@odata.type": "#microsoft.graph.mobileAppAssignment",
-  "intent": "required",
-  "target": {
-    "@odata.type": "microsoft.graph.allLicensedUsersAssignmentTarget",
-    "deviceAndAppManagementAssignmentFilterId": "Device And App Management Assignment Filter Id value",
-    "deviceAndAppManagementAssignmentFilterType": "include"
-  },
-  "settings": {
-    "@odata.type": "microsoft.graph.iosLobAppAssignmentSettings",
-    "vpnConfigurationId": "Vpn Configuration Id value",
-    "uninstallOnDeviceRemoval": true,
-    "isRemovable": true
-  },
-  "source": "policySets",
-  "sourceId": "Source Id value"
-}
+"mobileAppAssignments": [
+  {
+    "@odata.type": "#microsoft.graph.mobileAppAssignment",
+    "intent": "required",
+    "target": {
+      "@odata.type": "microsoft.graph.allLicensedUsersAssignmentTarget",
+      "deviceAndAppManagementAssignmentFilterId": "Device And App Management Assignment Filter Id value",
+      "deviceAndAppManagementAssignmentFilterType": "include"
+    },
+    "settings": {
+      "@odata.type": "microsoft.graph.iosLobAppAssignmentSettings",
+      "vpnConfigurationId": "Vpn Configuration Id value",
+      "uninstallOnDeviceRemoval": true,
+      "isRemovable": true
+    }
+  }
+]
 ```
 
 ### Response
