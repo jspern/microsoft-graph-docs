@@ -74,12 +74,12 @@ Content-length: 617
     "@odata.type": "#microsoft.graph.mobileAppAssignment",
     "intent": "required",
     "target": {
-      "@odata.type": "microsoft.graph.allLicensedUsersAssignmentTarget",
+      "@odata.type": "#microsoft.graph.allLicensedUsersAssignmentTarget",
       "deviceAndAppManagementAssignmentFilterId": "Device And App Management Assignment Filter Id value",
       "deviceAndAppManagementAssignmentFilterType": "include"
     },
     "settings": {
-      "@odata.type": "microsoft.graph.iosLobAppAssignmentSettings",
+      "@odata.type": "#microsoft.graph.iosLobAppAssignmentSettings",
       "vpnConfigurationId": "Vpn Configuration Id value",
       "uninstallOnDeviceRemoval": true,
       "isRemovable": true
